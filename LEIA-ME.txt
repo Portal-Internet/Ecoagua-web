@@ -1,0 +1,12 @@
+ECOÁGUA — SITE DE PEDIDOS
+
+Extraia o ZIP e abra index.html no navegador.
+Mantenha os arquivos e a pasta assets juntos.
+
+O formulário prepara a solicitação para o WhatsApp (98) 99972-2020.
+O usuário ainda precisa enviar a mensagem no WhatsApp.
+Não há banco de dados, pagamento online nem confirmação automática de pedido.
+
+Esta cópia usa caminhos relativos para funcionar localmente e em subpastas de hospedagem.
+Para hospedar, envie index.html, style.css, app.js, favicon.svg e assets ao serviço escolhido.
+A proteção de acesso da versão hospedada no Sites não faz parte destes arquivos.
