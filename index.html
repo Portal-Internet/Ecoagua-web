@@ -1,10 +1,532 @@
 <!doctype html>
-<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Ecoágua • Peça seu abastecimento</title><meta name="description" content="Solicite seu abastecimento de água potável em São Luís. Caminhões de 16 mil e 25 mil litros. Atendimento Ecoágua pelo WhatsApp."><link rel="icon" href="./favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="./style.css"></head><body>
-<header><a class="brand" href="./index.html" aria-label="Ecoágua início"><svg viewBox="0 0 40 48" aria-hidden="true"><path d="M20 2C15 12 4 22 4 31a16 16 0 0 0 32 0C36 22 25 12 20 2Z" fill="currentColor"/><path d="M11 30c0 7 6 12 13 10" fill="none" stroke="white" stroke-width="3" stroke-linecap="round"/></svg><span>ECO<span class="blue">ÁGUA</span><small>TRANSPORTE DE ÁGUA POTÁVEL</small></span></a><div class="header-right"><span>São Luís · MA</span><a href="tel:+5598999722020">(98) 99972-2020 <span aria-hidden="true">↗</span></a></div></header>
-<main><aside class="intro"><div class="intro-copy"><span class="eyebrow">ABASTECIMENTO COM TRANQUILIDADE</span><h1>Seu dia flui melhor com Ecoágua.</h1><p>Água de qualidade, filtrada e tratada. Peça água potável para seu condomínio, empresa ou residência.</p><div class="pills"><span>Atendimento 24h</span><span>16 mil e 25 mil litros</span></div></div><div class="photo"><img src="./assets/ecoagua.jpg" alt="Material de divulgação da Ecoágua com caminhão-pipa de abastecimento de água" fetchpriority="high"><div class="photo-caption"><span>ECOÁGUA · SÃO LUÍS</span><strong>Seu abastecimento começa aqui.</strong></div></div><div class="aside-bottom"><span class="small-drop">◉</span><p>Precisa de limpeza de caixa-d’água ou cisterna? <a href="https://wa.me/5598999722020?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%20para%20limpeza%20de%20caixa-d%27%C3%A1gua%20ou%20cisterna." target="_blank" rel="noopener noreferrer">Converse com nossa equipe ↗</a></p></div></aside>
-<section class="order" aria-labelledby="order-title"><div class="form-heading"><span class="eyebrow">FAÇA SEU PEDIDO</span><h2 id="order-title">Vamos levar água até você.</h2><p>Preencha os dados e solicite sua cotação pelo WhatsApp.</p></div>
-<form id="order-form"><fieldset><legend><span class="step">01</span> Qual volume você precisa?</legend><div class="volumes"><label class="volume"><input type="radio" name="volume" value="16.000 litros" checked><span><strong>16.000 <small>litros</small></strong><em>Caminhão-pipa</em></span><i></i></label><label class="volume"><input type="radio" name="volume" value="25.000 litros"><span><strong>25.000 <small>litros</small></strong><em>Caminhão-pipa</em></span><i></i></label></div><label class="unsure"><input type="radio" name="volume" value="Preciso de ajuda para definir o volume"> Ainda não sei. Preciso de orientação.</label></fieldset>
-<fieldset><legend><span class="step">02</span> Onde será o abastecimento?</legend><div class="grid"><label>Seu nome <span class="required">*</span><input name="nome" autocomplete="name" placeholder="Nome completo" required maxlength="100"></label><label>Tipo de local <span class="required">*</span><select name="local" required><option value="" disabled selected>Selecione</option><option>Condomínio</option><option>Empresa</option><option>Residência</option><option>Escola</option><option>Hospital</option><option>Shopping</option><option>Outro</option></select></label></div><label>Telefone <span class="required">*</span><input type="tel" name="telefone" autocomplete="tel" inputmode="tel" placeholder="(98) 99999-9999" required minlength="10" maxlength="20" pattern="[+0-9() .\-]{10,20}" title="Informe seu telefone com DDD, por exemplo: (98) 99999-9999"></label><label>Endereço e número <span class="required">*</span><input name="endereco" autocomplete="street-address" placeholder="Ex.: Rua das Palmeiras, 120" required maxlength="200"></label><div class="grid"><label>Bairro <span class="required">*</span><input name="bairro" placeholder="Seu bairro" required maxlength="100"></label><label>Cidade <span class="required">*</span><input name="cidade" value="São Luís" autocomplete="address-level2" required maxlength="100"></label></div></fieldset>
-<fieldset><legend><span class="step">03</span> Quando você precisa?</legend><div class="grid"><label>Preferência de entrega<select name="prazo" id="prazo"><option>O mais breve possível</option><option>Hoje</option><option>Agendar uma data</option></select></label><label id="date-wrap" hidden>Data desejada <span class="required">*</span><input type="date" name="data" id="data"></label></div><label>Observações <span class="optional">(opcional)</span><textarea name="observacoes" rows="2" maxlength="500" placeholder="Referência, nome do condomínio ou orientações de acesso"></textarea></label></fieldset>
-<div class="summary"><span>Seu abastecimento</span><strong id="volume-summary">16.000 litros</strong><span>Valor e entrega</span><span>A confirmar com a equipe</span></div><button type="submit" class="submit"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.5a9 9 0 0 1-13.2 8L3 21l1.5-4.8A9 9 0 1 1 21 11.5Z"/><path d="M8 7c-2 3 3 8 6 8l2-2-3-1-1 1-2-2 1-1-1-3Z"/></svg>Continuar no WhatsApp <span aria-hidden="true">↗</span></button><p class="form-note">Você revisa e envia a mensagem no WhatsApp.<br>O pedido será confirmado pela equipe após a cotação.</p><p id="status" role="status"></p>
-</form></section></main><footer><span>© Ecoágua · São Luís, MA</span><div><a href="mailto:ecoagua@portalma.com.br">ecoagua@portalma.com.br</a><a href="https://www.instagram.com/ecoagua.slz/" target="_blank" rel="noopener noreferrer">@ecoagua.slz ↗</a></div></footer><script src="./app.js"></script></body></html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width,initial-scale=1"
+  >
+
+  <title>Ecoágua • Peça seu abastecimento</title>
+
+  <meta
+    name="description"
+    content="Solicite seu abastecimento de água potável em São Luís. Caminhões de 16 mil e 25 mil litros. Atendimento Ecoágua pelo WhatsApp."
+  >
+
+  <!-- FAVICON -->
+  <link
+    rel="icon"
+    type="image/png"
+    href="./assets/favicon.png"
+  >
+
+  <link
+    rel="apple-touch-icon"
+    href="./assets/favicon.png"
+  >
+
+  <link
+    rel="stylesheet"
+    href="./style.css"
+  >
+</head>
+
+<body>
+
+<header>
+
+  <!-- LOGO ECOÁGUA -->
+  <a
+    class="brand"
+    href="./index.html"
+    aria-label="Ecoágua início"
+  >
+    <img
+      src="./assets/logo-ecoagua.png"
+      alt="Ecoágua"
+      class="brand-logo"
+    >
+  </a>
+
+  <div class="header-right">
+    <span>São Luís · MA</span>
+
+    <a href="tel:+5598999722020">
+      (98) 99972-2020
+      <span aria-hidden="true">↗</span>
+    </a>
+  </div>
+
+</header>
+
+
+<main>
+
+  <aside class="intro">
+
+    <div class="intro-copy">
+
+      <span class="eyebrow">
+        ABASTECIMENTO COM TRANQUILIDADE
+      </span>
+
+      <h1>
+        Seu dia flui melhor com Ecoágua.
+      </h1>
+
+      <p>
+        Água de qualidade, filtrada e tratada.
+        Peça água potável para seu condomínio,
+        empresa ou residência.
+      </p>
+
+      <div class="pills">
+        <span>Atendimento 24h</span>
+        <span>16 mil e 25 mil litros</span>
+      </div>
+
+    </div>
+
+
+    <div class="photo">
+
+      <img
+        src="./assets/ecoagua.jpg"
+        alt="Material de divulgação da Ecoágua com caminhão-pipa de abastecimento de água"
+        fetchpriority="high"
+      >
+
+      <div class="photo-caption">
+        <span>ECOÁGUA · SÃO LUÍS</span>
+        <strong>Seu abastecimento começa aqui.</strong>
+      </div>
+
+    </div>
+
+
+    <div class="aside-bottom">
+
+      <span class="small-drop">◉</span>
+
+      <p>
+        Precisa de limpeza de caixa-d’água ou cisterna?
+
+        <a
+          href="https://wa.me/5598999722020?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%20para%20limpeza%20de%20caixa-d%27%C3%A1gua%20ou%20cisterna."
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Converse com nossa equipe ↗
+        </a>
+
+      </p>
+
+    </div>
+
+  </aside>
+
+
+  <section
+    class="order"
+    aria-labelledby="order-title"
+  >
+
+    <div class="form-heading">
+
+      <span class="eyebrow">
+        FAÇA SEU PEDIDO
+      </span>
+
+      <h2 id="order-title">
+        Vamos levar água até você.
+      </h2>
+
+      <p>
+        Preencha os dados e solicite sua cotação
+        pelo WhatsApp.
+      </p>
+
+    </div>
+
+
+    <form id="order-form">
+
+      <fieldset>
+
+        <legend>
+          <span class="step">01</span>
+          Qual volume você precisa?
+        </legend>
+
+
+        <div class="volumes">
+
+          <label class="volume">
+
+            <input
+              type="radio"
+              name="volume"
+              value="16.000 litros"
+              checked
+            >
+
+            <span>
+              <strong>
+                16.000
+                <small>litros</small>
+              </strong>
+
+              <em>Caminhão-pipa</em>
+            </span>
+
+            <i></i>
+
+          </label>
+
+
+          <label class="volume">
+
+            <input
+              type="radio"
+              name="volume"
+              value="25.000 litros"
+            >
+
+            <span>
+              <strong>
+                25.000
+                <small>litros</small>
+              </strong>
+
+              <em>Caminhão-pipa</em>
+            </span>
+
+            <i></i>
+
+          </label>
+
+        </div>
+
+
+        <label class="unsure">
+
+          <input
+            type="radio"
+            name="volume"
+            value="Preciso de ajuda para definir o volume"
+          >
+
+          Ainda não sei. Preciso de orientação.
+
+        </label>
+
+      </fieldset>
+
+
+      <fieldset>
+
+        <legend>
+          <span class="step">02</span>
+          Onde será o abastecimento?
+        </legend>
+
+
+        <div class="grid">
+
+          <label>
+
+            Seu nome
+            <span class="required">*</span>
+
+            <input
+              name="nome"
+              autocomplete="name"
+              placeholder="Nome completo"
+              required
+              maxlength="100"
+            >
+
+          </label>
+
+
+          <label>
+
+            Tipo de local
+            <span class="required">*</span>
+
+            <select
+              name="local"
+              required
+            >
+
+              <option
+                value=""
+                disabled
+                selected
+              >
+                Selecione
+              </option>
+
+              <option>Condomínio</option>
+              <option>Empresa</option>
+              <option>Residência</option>
+              <option>Escola</option>
+              <option>Hospital</option>
+              <option>Shopping</option>
+              <option>Outro</option>
+
+            </select>
+
+          </label>
+
+        </div>
+
+
+        <label>
+
+          Telefone
+          <span class="required">*</span>
+
+          <input
+            type="tel"
+            name="telefone"
+            autocomplete="tel"
+            inputmode="tel"
+            placeholder="(98) 99999-9999"
+            required
+            minlength="10"
+            maxlength="20"
+            pattern="[+0-9() .\-]{10,20}"
+            title="Informe seu telefone com DDD, por exemplo: (98) 99999-9999"
+          >
+
+        </label>
+
+
+        <label>
+
+          Endereço e número
+          <span class="required">*</span>
+
+          <input
+            name="endereco"
+            autocomplete="street-address"
+            placeholder="Ex.: Rua das Palmeiras, 120"
+            required
+            maxlength="200"
+          >
+
+        </label>
+
+
+        <div class="grid">
+
+          <label>
+
+            Bairro
+            <span class="required">*</span>
+
+            <input
+              name="bairro"
+              placeholder="Seu bairro"
+              required
+              maxlength="100"
+            >
+
+          </label>
+
+
+          <label>
+
+            Cidade
+            <span class="required">*</span>
+
+            <input
+              name="cidade"
+              value="São Luís"
+              autocomplete="address-level2"
+              required
+              maxlength="100"
+            >
+
+          </label>
+
+        </div>
+
+      </fieldset>
+
+
+      <fieldset>
+
+        <legend>
+          <span class="step">03</span>
+          Quando você precisa?
+        </legend>
+
+
+        <div class="grid">
+
+          <label>
+
+            Preferência de entrega
+
+            <select
+              name="prazo"
+              id="prazo"
+            >
+
+              <option>
+                O mais breve possível
+              </option>
+
+              <option>
+                Hoje
+              </option>
+
+              <option>
+                Agendar uma data
+              </option>
+
+            </select>
+
+          </label>
+
+
+          <label
+            id="date-wrap"
+            hidden
+          >
+
+            Data desejada
+            <span class="required">*</span>
+
+            <input
+              type="date"
+              name="data"
+              id="data"
+            >
+
+          </label>
+
+        </div>
+
+
+        <label>
+
+          Observações
+          <span class="optional">
+            (opcional)
+          </span>
+
+          <textarea
+            name="observacoes"
+            rows="2"
+            maxlength="500"
+            placeholder="Referência, nome do condomínio ou orientações de acesso"
+          ></textarea>
+
+        </label>
+
+      </fieldset>
+
+
+      <div class="summary">
+
+        <span>
+          Seu abastecimento
+        </span>
+
+        <strong id="volume-summary">
+          16.000 litros
+        </strong>
+
+        <span>
+          Valor e entrega
+        </span>
+
+        <span>
+          A confirmar com a equipe
+        </span>
+
+      </div>
+
+
+      <button
+        type="submit"
+        class="submit"
+      >
+
+        <svg
+          viewBox="0 0 24 24"
+          aria-hidden="true"
+        >
+
+          <path
+            d="M21 11.5a9 9 0 0 1-13.2 8L3 21l1.5-4.8A9 9 0 1 1 21 11.5Z"
+          />
+
+          <path
+            d="M8 7c-2 3 3 8 6 8l2-2-3-1-1 1-2-2 1-1-1-3Z"
+          />
+
+        </svg>
+
+        Continuar no WhatsApp
+
+        <span aria-hidden="true">
+          ↗
+        </span>
+
+      </button>
+
+
+      <p class="form-note">
+        Você revisa e envia a mensagem no WhatsApp.
+        <br>
+        O pedido será confirmado pela equipe após a cotação.
+      </p>
+
+
+      <p
+        id="status"
+        role="status"
+      ></p>
+
+    </form>
+
+  </section>
+
+</main>
+
+
+<footer>
+
+  <span>
+    © Ecoágua · São Luís, MA
+  </span>
+
+  <div>
+
+    <a href="mailto:ecoagua@portalma.com.br">
+      ecoagua@portalma.com.br
+    </a>
+
+    <a
+      href="https://www.instagram.com/ecoagua.slz/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      @ecoagua.slz ↗
+    </a>
+
+  </div>
+
+</footer>
+
+
+<script src="./app.js"></script>
+
+</body>
+</html>
