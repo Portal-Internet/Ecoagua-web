@@ -29,23 +29,28 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 26px 48px;
+  gap: 24px;
 }
 
-/* NOVA LOGO */
+/* LOGO */
 
 .brand {
   display: flex;
   align-items: center;
+  justify-content: flex-start;
   text-decoration: none;
+  width: 230px;
+  height: 70px;
   flex-shrink: 0;
+  overflow: hidden;
 }
 
 .brand-logo {
   display: block;
-  width: 245px;
-  max-width: 100%;
-  height: auto;
+  width: 100%;
+  height: 100%;
   object-fit: contain;
+  object-position: left center;
 }
 
 .header-right {
@@ -53,6 +58,7 @@ header {
   gap: 30px;
   align-items: center;
   font-size: 14px;
+  flex-shrink: 0;
 }
 
 .header-right > span {
@@ -524,8 +530,9 @@ footer a {
     padding: 22px 28px;
   }
 
-  .brand-logo {
-    width: 215px;
+  .brand {
+    width: 200px;
+    height: 60px;
   }
 
   main {
@@ -557,8 +564,9 @@ footer a {
     padding: 18px 20px;
   }
 
-  .brand-logo {
-    width: 175px;
+  .brand {
+    width: 170px;
+    height: 52px;
   }
 
   .header-right > span {
@@ -651,8 +659,9 @@ footer a {
     gap: 10px;
   }
 
-  .brand-logo {
+  .brand {
     width: 145px;
+    height: 45px;
   }
 
   .header-right a {
@@ -671,8 +680,9 @@ footer a {
     grid-template-columns: 1fr;
   }
 
-  .brand-logo {
-    width: 130px;
+  .brand {
+    width: 125px;
+    height: 42px;
   }
 
   .volume strong {
